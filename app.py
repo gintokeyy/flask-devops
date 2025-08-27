@@ -36,7 +36,7 @@ def square():
     if request.method == "GET":
         n = request.args.get("n", 0)
         try:
-            n = float(n)  # convert to number
+            n = float(n)  
         except ValueError:
             return jsonify({"error": "Invalid number"}), 400
         return jsonify({"result": n**2})
